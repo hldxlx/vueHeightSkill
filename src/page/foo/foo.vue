@@ -18,9 +18,23 @@
     <router-link to="/fooChild1">Go to FooChild1</router-link>
     <router-link to="/fooChild2">Go to FooChild2</router-link>
     <!--<foo-child :msg="message"  @msgFunc="func"></foo-child>-->
-    <!--这是在父组件里调用foo-child这个子组件-->
+    <!--这是在父组件里调用foo-child这个子组件 具名插槽-->
     <foo-child :msg="message" @msgFunc="func">
+      <template slot="header">
+        <h1>将插入 header slot中</h1>
+      </template>
       <div slot="st">父组件填充的内容</div>
+      <template slot="footer">
+        <h1>将插入 footer slot中</h1>
+      </template>
+    </foo-child>
+    <!--作用域插槽-->
+    <foo-child :msg="message">
+      <!--//在 template 设置v-slot为任意命名参数slotProps，-->
+      <!--// 取值 slotProps.子组件slot上自定义属性slotDate.子组件数据-->
+      <template v-slot="slotProps">
+        作用域插槽{{slotProps.slotDate.title}}
+      </template>
     </foo-child>
     <router-view/>
   </div>
