@@ -9,4 +9,7 @@
  
  // 代替 Object.assign(this.obj, { a: 1, e: 2 })
  this.obj= Object.assign({}, this.obj, { a: 1, e: 2 })
+ 
+ #https://www.jianshu.com/p/7db1e90e012f
+ #1. 路由设置 2. store 3. vue选择器 4. 插槽 5. cookie  6. ajax
 

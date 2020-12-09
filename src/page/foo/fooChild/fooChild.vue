@@ -2,6 +2,7 @@
   <div>
     <div>{{msg}}</div>
     <button @click="handleClick">点我</button>
+    <slot name="st">插槽66</slot>
   </div>
 </template>
 

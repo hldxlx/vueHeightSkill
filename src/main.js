@@ -9,7 +9,11 @@ import { AlertPlugin } from 'vux'
 import store from './store/index'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import VueCookie from 'vue-cookie'
+Vue.prototype.$cookie=VueCookie
 
+import VueAjax from 'axios'
+Vue.prototype.$ajax=VueAjax;
 
 Vue.use(Element)
 

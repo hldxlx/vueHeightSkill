@@ -15,7 +15,13 @@ const router = new Router({
     {
       path: '/',
       name: 'home',
-      component: home
+      // 路由的重定向
+      redirect: '/home',
+      // component: home
+    },
+    {
+      path: '/home',
+      component: () => import('../page/home/home.vue')
     },
     {
       path: '/foo',

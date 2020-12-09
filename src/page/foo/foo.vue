@@ -15,10 +15,13 @@
       inactive-color="#ff4949">
     </el-switch>
 
-
     <router-link to="/fooChild1">Go to FooChild1</router-link>
     <router-link to="/fooChild2">Go to FooChild2</router-link>
-    <foo-child :msg="message"  @msgFunc="func"></foo-child>
+    <!--<foo-child :msg="message"  @msgFunc="func"></foo-child>-->
+    <!--这是在父组件里调用foo-child这个子组件-->
+    <foo-child :msg="message" @msgFunc="func">
+      <div slot="st">父组件填充的内容</div>
+    </foo-child>
     <router-view/>
   </div>
 </template>

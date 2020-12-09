@@ -25,8 +25,9 @@
     watch: {
       e: {
         handler: function (val, oldVal) {
-          console.log(val,'新的')
-          console.log(oldVal,'老的')
+          // console.log(val,'新的')
+          // console.log(oldVal,'老的')
+          // val和oldVal一样
         },
         deep: true
       },
